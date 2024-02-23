@@ -11,7 +11,7 @@ initialization:
 
 event listeners:
 -- each div listens for mouse hover and changes the class upon activation.
--- button prompt stores user input as "x". deletes all divs descendant to the container first. evoke a for loop which continues for as long as "i" is less than x. {create x divs and append them to the container /continue}
+-- button prompt stores user input as "x". deletes all divs descendant to the container first. evoke a for loop which continues for as long as "i" is less than x. columnloop with a nested rowloop{create x divs and append them to the container /continue} 
 
 extra credit...?
 -- randomizing the rgb value of a hovered square. random number for each value: R G and B and then assign variables and overwrite the value on each individual div's class. this requires a inline application of style via javascript as opposed to assigning a new class. Unless there's a css function for this?
