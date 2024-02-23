@@ -8,9 +8,16 @@
     height: 750px;
 }
 .box {
-    min-width: 187.5px;
-    min-height: 187.5x;
+    min-width: calc(750px/16);
+    min-height: calc(750px/16);
     border: 2px solid black;
     flex-grow: 1;
     background-color: white;
+}
+.box-black {
+    min-width: calc(750px/16);
+    min-height: calc(750px/16);
+    border: 2px solid black;
+    flex-grow: 1;
+    background-color: black;
 }
