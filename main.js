@@ -11,6 +11,10 @@ window.addEventListener("mouseup", () => {
     console.log(mouseDown);
 })
 
+function randomRGB() {
+    return Math.floor(Math.random() * (255 - 1) + 1);
+}
+
 function default16x16() {
     let i = 0;
     while (i < 256) {
@@ -24,15 +28,18 @@ function default16x16() {
 default16x16();
 let boxes = document.querySelectorAll(".box");
 
-function toBlack() {
+function draw() {
     if (mouseDown === false) {
         return
     } else {
-    this.style.backgroundColor = "black";
+        const red = randomRGB()
+        const green = randomRGB()
+        const blue = randomRGB()
+        this.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
     }
 }
 
-boxes.forEach(div => div.addEventListener('mouseover', toBlack, {
+boxes.forEach(div => div.addEventListener('mouseover', draw, {
     capture: false
 }))
 
@@ -56,7 +63,7 @@ function newGrid() {
     i++;
   }
   boxes = document.querySelectorAll(".box");
-  boxes.forEach(div => div.addEventListener('mouseover', toBlack, {
+  boxes.forEach(div => div.addEventListener('mouseover', draw, {
     capture: false
   }))
  }
