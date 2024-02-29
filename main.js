@@ -20,3 +20,9 @@ function toBlack() {
 boxes.forEach(div => div.addEventListener('mouseover', toBlack, {
     capture: false
 }))
+
+function removeChild() {
+    while (container.firstChild) {
+      container.removeChild(container.firstChild)
+    }
+  }
