@@ -1,5 +1,15 @@
 const container = document.querySelector("#sketch-container");
 const newButton = document.querySelector("#new-grid").addEventListener("click",newGrid);
+let mouseDown = false;
+
+window.addEventListener("mousedown", () => {
+    mouseDown = true;
+    console.log(mouseDown);
+})
+window.addEventListener("mouseup", () => {
+    mouseDown = false;
+    console.log(mouseDown);
+})
 
 function default16x16() {
     let i = 0;
