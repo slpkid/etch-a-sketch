@@ -17,7 +17,7 @@
 .box-black {
     min-width: calc(750px/16);
     min-height: calc(750px/16);
-    border: 2px solid black;
+    border: 1px solid black;
     flex-grow: 1;
     background-color: black;
 }
