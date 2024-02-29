@@ -9,8 +9,8 @@ window.addEventListener("mouseup", () => {
     mouseDown = false;
 })
 
-function randomRGB() {
-    return Math.floor(Math.random() * (255 - 1) + 1);
+function randomRGB(min,max) {
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 function default16x16() {
@@ -30,15 +30,19 @@ function draw() {
     if (mouseDown === false) {
         return
     } else {
-        const red = randomRGB()
-        const green = randomRGB()
-        const blue = randomRGB()
-        this.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+        const hue = randomRGB(0,360);
+        const saturation = `${randomRGB(0,100)}%`;
+        const lightness = `${randomRGB(0,100)}%`;
+        this.style.backgroundColor = 'hsl(' + hue + ',' + saturation + ',' + lightness + ')';
     }
 }
 
 function toBlack() {
-    this.style.backgroundColor = "black";
+    if (mouseDown === false) {
+        return
+    } else {
+        this.style.backgroundColor = "black";
+    }
 }
 
 boxes.forEach(div => div.addEventListener('mouseover', draw, {
