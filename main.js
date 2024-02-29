@@ -4,11 +4,9 @@ let mouseDown = false;
 
 window.addEventListener("mousedown", () => {
     mouseDown = true;
-    console.log(mouseDown);
 })
 window.addEventListener("mouseup", () => {
     mouseDown = false;
-    console.log(mouseDown);
 })
 
 function randomRGB() {
@@ -37,6 +35,10 @@ function draw() {
         const blue = randomRGB()
         this.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
     }
+}
+
+function toBlack() {
+    this.style.backgroundColor = "black";
 }
 
 boxes.forEach(div => div.addEventListener('mouseover', draw, {
