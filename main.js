@@ -25,7 +25,11 @@ default16x16();
 let boxes = document.querySelectorAll(".box");
 
 function toBlack() {
+    if (mouseDown === false) {
+        return
+    } else {
     this.style.backgroundColor = "black";
+    }
 }
 
 boxes.forEach(div => div.addEventListener('mouseover', toBlack, {
